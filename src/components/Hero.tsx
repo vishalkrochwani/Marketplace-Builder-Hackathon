@@ -24,7 +24,7 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-1/2 h-full flex items-center justify-center">
           <Image
-            src="/image/rocket_chair.jpeg"
+            src="/image/rocket_chair.webp"
             alt="Rocket Single Seater"
             width={500} 
             height={500} 
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="flex justify-between">
             <div className="w-1/2 pr-4">
             <Image
-                src="/image/side_table.jpeg"
+                src="/image/side_table.webp"
                 alt="Side Table"
                 width={400}
                 height={400}
@@ -54,7 +54,7 @@ const Hero = () => {
             </div>
             <div className="w-1/2 pl-4">
             <Image
-                src="/image/side_table_2.jpeg"
+                src="/image/side_table_2.webp"
                 alt="Another Side Table"
                 width={400}
                 height={400}
@@ -79,7 +79,7 @@ const Hero = () => {
           <div className="grid grid-cols-4 gap-4">
             <div className="text-center">
               <Image
-                src="/image/product1.jpeg"
+                src="/image/product1.webp"
                 alt="Product 1"
                 width={150}
                 height={150}
@@ -90,7 +90,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <Image
-                src="/image/product2.jpeg"
+                src="/image/product2.webp"
                 alt="Product 2"
                 width={150}
                 height={150}
@@ -101,7 +101,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <Image
-                src="/image/product3.jpeg"
+                src="/image/product3.webp"
                 alt="Product 3"
                 width={150}
                 height={150}
@@ -112,7 +112,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <Image
-                src="/image/product4.jpeg"
+                src="/image/product4.webp"
                 alt="Product 4"
                 width={150}
                 height={150}
@@ -133,7 +133,7 @@ const Hero = () => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="w-1/2 pr-4">
             <Image
-              src="/image/asgaardsofa.jpeg" 
+              src="/image/asgaardsofa.webp" 
               alt="Asgaard Sofa"
               width={500}
               height={500}
@@ -168,7 +168,7 @@ const Hero = () => {
     <div className="grid grid-cols-3 gap-4">
       <div className="text-center">
         <Image
-          src="/image/blog1.png"
+          src="/image/blog1.webp"
           alt="Blog Post 1"
           width={300}
           height={300}
@@ -186,7 +186,7 @@ const Hero = () => {
 
       <div className="text-center">
         <Image
-          src="/image/blog2.jpeg"
+          src="/image/blog2.webp"
           alt="Blog Post 2"
           width={150}
           height={150}
@@ -204,7 +204,7 @@ const Hero = () => {
 
       <div className="text-center">
         <Image
-          src="/image/blog3.jpeg"
+          src="/image/blog3.webp"
           alt="Blog Post 3"
           width={150}
           height={150}

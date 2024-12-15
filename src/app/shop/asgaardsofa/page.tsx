@@ -18,28 +18,28 @@ const AsgaardSofaPage = () => {
         {/* First Column: Four Images */}
         <div className="flex flex-col gap-4">
           <Image
-            src="/image/s2p1c1r1.png"
+            src="/image/s2p1c1r1.webp"
             alt="Product 1"
             width={150}
             height={150}
             className="object-contain mx-auto"
           />
           <Image
-            src="/image/s2p1c1r2.png"
+            src="/image/s2p1c1r2.webp"
             alt="Product 2"
             width={150}
             height={150}
             className="object-contain mx-auto"
           />
           <Image
-            src="/image/s2p1c1r3.png"
+            src="/image/s2p1c1r3.webp"
             alt="Product 3"
             width={150}
             height={150}
             className="object-contain mx-auto"
           />
           <Image
-            src="/image/asgaardsofa.jpeg"
+            src="/image/asgaardsofa.webp"
             alt="Product 4"
             width={150}
             height={150}
@@ -50,7 +50,7 @@ const AsgaardSofaPage = () => {
         {/* Second Column: Large Image */}
         <div>
           <Image
-            src="/image/asgaardsofa.jpeg"
+            src="/image/asgaardsofa.webp"
             alt="Asgaard Sofa Large Image"
             width={1000}
             height={1000}
@@ -144,7 +144,7 @@ const AsgaardSofaPage = () => {
     <div className="grid grid-cols-2 gap-4 mb-8">
       <div>
         <Image
-          src="/image/s2p1s3c3.png" 
+          src="/image/s2p1s3c3.webp" 
           alt="Second Row Image 1"
           width={600}
           height={400}
@@ -153,7 +153,7 @@ const AsgaardSofaPage = () => {
       </div>
       <div>
         <Image
-          src="/image/s2p1s3c2.png" 
+          src="/image/s2p1s3c2.webp" 
           alt="Second Row Image 2"
           width={600}
           height={400}
@@ -186,7 +186,7 @@ const AsgaardSofaPage = () => {
           <div className="grid grid-cols-4 gap-4">
             <div className="text-center">
               <Image
-                src="/image/product1.jpeg"
+                src="/image/product1.webp"
                 alt="Product 1"
                 width={150}
                 height={150}
@@ -197,7 +197,7 @@ const AsgaardSofaPage = () => {
             </div>
             <div className="text-center">
               <Image
-                src="/image/product2.jpeg"
+                src="/image/product2.webp"
                 alt="Product 2"
                 width={150}
                 height={150}
@@ -208,7 +208,7 @@ const AsgaardSofaPage = () => {
             </div>
             <div className="text-center">
               <Image
-                src="/image/product3.jpeg"
+                src="/image/product3.webp"
                 alt="Product 3"
                 width={150}
                 height={150}
@@ -219,7 +219,7 @@ const AsgaardSofaPage = () => {
             </div>
             <div className="text-center">
               <Image
-                src="/image/product4.jpeg"
+                src="/image/product4.webp"
                 alt="Product 4"
                 width={150}
                 height={150}

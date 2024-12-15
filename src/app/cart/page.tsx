@@ -12,7 +12,7 @@ const Cart = () => {
           {/* Small Image in Center */}
           <div className="mb-4">
             <Image
-              src="/image/shop.png" 
+              src="/image/shop.webp" 
               alt="Shop Icon"
               width={100}   
               height={100}  
@@ -64,7 +64,7 @@ const Cart = () => {
                 {/* Second Row */}
                 <div className="flex justify-center">
                   <Image
-                    src="/image/asgaardsofa.jpeg"
+                    src="/image/asgaardsofa.webp"
                     alt="Asgaard Sofa"
                     width={150}
                     height={150}
