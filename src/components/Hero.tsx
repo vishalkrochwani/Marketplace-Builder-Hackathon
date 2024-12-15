@@ -145,13 +145,14 @@ const Hero = () => {
             <h2 className="text-5xl font-bold text-black mb-6">Asgaard Sofa</h2>
            
             <div className="container mx-auto flex justify-end py-10 text-center">
-  <a 
-    href="/shop/asgaardsofa"
-    className=" text-center border-2 border-black text-black py-2 px-6 text-lg font-semibold rounded-md hover:bg-black hover:text-white transition"
-    style={{ width: "200px", textAlign: "center" }}
-  >
-    Order Now
-  </a>
+            <a 
+  href="/shop/asgaardsofa"
+  className="align-center text-center border-2 border-black text-black py-2 px-6 text-lg font-semibold rounded-md hover:bg-black hover:text-white transition"
+  style={{ display: "inline-block", textAlign: "center" }}
+>
+  Order Now
+</a>
+
 </div>
 
           </div>
