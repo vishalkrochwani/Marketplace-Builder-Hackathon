@@ -3,95 +3,105 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoCloseCircleOutline } from 'react-icons/io5'; // For cross icon
+import { useState } from 'react'; // For handling the state of the cart visibility
 
 const CartPage = () => {
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const toggleCart = () => setCartOpen(!cartOpen);
+
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {/* Header with Cart Button (you can link it to cart button from the header) */}
-      <header className="bg-black text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          
-          <Link href="/cart" className="text-white">
-            Cart
-          </Link>
-        </div>
-      </header>
+    <div className="relative">
+      {/* Backdrop when cart is open */}
+      {cartOpen && (
+        <div
+          className="fixed inset-0 bg-gray-500 bg-opacity-50 backdrop-blur-sm z-40"
+          onClick={toggleCart}
+        ></div>
+      )}
 
-      {/* Section 1: Cart Header */}
-<section className="bg-white py-10">
-  <div className="container mx-auto px-4 flex items-center justify-center">
-    <div className="flex flex-col items-center">
-      <ul className='flex gap-8'> {/* corrected gap-30 to gap-8 for better spacing */}
-        <li>
-          <h2 className="text-4xl font-bold">Shopping Cart</h2>
-        </li>
-        <li>
-          <IoCloseCircleOutline className="text-6xl text-gray-500 mt-4" />
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+      {/* Side Cart Panel */}
+      <div
+        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+          cartOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {/* Cart Header */}
+        <header className="bg-black text-white p-4">
+          <div className="container mx-auto flex justify-between items-center">
+            <p className="text-lg font-bold">Cart</p>
+            <IoCloseCircleOutline
+              onClick={toggleCart}
+              className="text-3xl cursor-pointer"
+            />
+          </div>
+        </header>
 
-<div className="border-t border-gray-300"></div>
-
-
-      {/* Section 2: Product Details */}
-      <section className="bg-white py-10">
-        <div className="container mx-auto px-4 flex items-center justify-between">
-          {/* Product Image */}
-          <div className="flex items-center">
+        {/* Cart Content */}
+        <section className="py-10 px-4">
+          <div className="flex items-center justify-between">
             <Image
               src="/image/asgaardsofa.jpeg"
               alt="Asgaard Sofa"
-              width={400}
-              height={400}
+              width={80}
+              height={80}
               className="object-cover rounded"
             />
+            <div className="flex flex-col ml-4">
+              <p className="text-lg font-bold">Asgaard Sofa</p>
+              <p className="text-sm text-gray-500">1 x Asgaard Sofa</p>
+              <p className="text-lg font-bold mt-2">Rs. 250,000.00</p>
+            </div>
           </div>
+        </section>
 
-          {/* Product Details */}
-          <div className="flex flex-col ml-4">
-            <p className="text-xl font-bold">Asgaard Sofa</p>
-            <p className="text-gray-500">1 x Asgaard Sofa</p>
-            <p className="text-lg font-bold mt-2">Rs. 250,000.00</p>
-          </div>
-        </div>
-      </section>
-
-      <div className="border-t border-gray-300"></div>
-
-      {/* Section 3: Subtotal */}
-      <section className="bg-white py-10">
-        <div className="container mx-auto px-4 grid grid-cols-2">
-          <div className="flex items-center justify-start">
+        {/* Subtotal Section */}
+        <section className="py-10 px-4 border-t">
+          <div className="flex justify-between items-center">
             <p className="text-lg font-bold">Subtotal</p>
-          </div>
-          <div className="flex items-center justify-end">
             <p className="text-lg font-bold">Rs. 250,000.00</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <div className="border-t border-gray-300"></div>
+        {/* Action Buttons */}
+        <section className="py-10 px-4 border-t">
+          <div className="flex flex-col gap-4">
+            <Link
+              href="/shop/asgaardsofa/cart"
+              className="py-3 border-2 border-black rounded text-center text-black hover:bg-gray-200"
+            >
+              View Cart
+            </Link>
+            <Link
+              href="/shop/asgaardsofa/cart/checkout"
+              className="py-3 border-2 border-black rounded text-center text-black hover:bg-gray-200"
+            >
+              Checkout
+            </Link>
+          </div>
+        </section>
+      </div>
 
-      {/* Section 4: Buttons */}
-      <section className="bg-white py-10">
-        <div className="container mx-auto px-4 grid grid-cols-2 gap-4">
-          <Link
-            href="/shop/asgaardsofa/cart"
-            className="flex items-center justify-center py-3 border-2 border-black rounded text-center text-black hover:bg-gray-200"
-          >
-            <span>View Cart</span>
-          </Link>
-          <Link
-            href="/shop/asgaardsofa/cart/checkout"
-            className="flex items-center justify-center py-3 border-2 border-black rounded text-center text-black hover:bg-gray-200"
-          >
-            <span>Checkout</span>
-          </Link>
-        </div>
-      </section>
+      {/* Main Content */}
+      <div
+        className={`transition-all duration-300 ${
+          cartOpen ? 'filter blur-sm' : 'filter-none'
+        }`}
+      >
+        {/* Main Page Content */}
+        <section className="bg-white py-10">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-center items-center">
+              <button
+                className="py-2 px-4 bg-black text-white rounded"
+                onClick={toggleCart}
+              >
+                Open Cart
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <div className="bg-amber-100">
       <header className="text-black">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-end">
           
 
           {/* Navigation Links - Aligned to the right */}
