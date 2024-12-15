@@ -3,10 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Checkout = () => {
-  const handlePlaceOrder = () => {
-    alert('Order Placed!');
-  };
-
   return (
     <div>
       {/* First Section with Tailwind Background */}
@@ -21,7 +17,6 @@ const Checkout = () => {
               width={100}   
               height={100}  
               className="object-cover rounded-full"
-              layout="intrinsic"
             />
           </div>
           <h1 className="text-5xl font-bold">Check Out</h1>
@@ -47,7 +42,6 @@ const Checkout = () => {
                     id="firstName"
                     placeholder="Enter your first name"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="First Name"
                   />
                 </div>
                 {/* Last Name */}
@@ -58,7 +52,6 @@ const Checkout = () => {
                     id="lastName"
                     placeholder="Enter your last name"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Last Name"
                   />
                 </div>
                 {/* Company Name */}
@@ -69,7 +62,6 @@ const Checkout = () => {
                     id="companyName"
                     placeholder="Enter your company name"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Company Name"
                   />
                 </div>
                 {/* Country/Region */}
@@ -80,7 +72,6 @@ const Checkout = () => {
                     id="country"
                     placeholder="Enter your country"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Country"
                   />
                 </div>
                 {/* Street Address */}
@@ -91,7 +82,6 @@ const Checkout = () => {
                     id="streetAddress"
                     placeholder="Enter your street address"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Street Address"
                   />
                 </div>
                 {/* Town/City */}
@@ -102,7 +92,6 @@ const Checkout = () => {
                     id="townCity"
                     placeholder="Enter your town or city"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Town/City"
                   />
                 </div>
                 {/* Province */}
@@ -113,7 +102,6 @@ const Checkout = () => {
                     id="province"
                     placeholder="Enter your province"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Province"
                   />
                 </div>
                 {/* ZIP Code */}
@@ -124,7 +112,6 @@ const Checkout = () => {
                     id="zipCode"
                     placeholder="Enter your ZIP code"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="ZIP Code"
                   />
                 </div>
                 {/* Phone */}
@@ -135,7 +122,6 @@ const Checkout = () => {
                     id="phone"
                     placeholder="Enter your phone number"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Phone"
                   />
                 </div>
                 {/* Email */}
@@ -146,7 +132,6 @@ const Checkout = () => {
                     id="email"
                     placeholder="Enter your email"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Email"
                   />
                 </div>
                 {/* Additional Information */}
@@ -156,7 +141,6 @@ const Checkout = () => {
                     id="additionalInfo"
                     placeholder="Any additional information"
                     className="w-full p-3 border border-gray-300 rounded-md"
-                    aria-label="Additional Information"
                   />
                 </div>
               </form>
@@ -192,15 +176,19 @@ const Checkout = () => {
               </p>
               <h3 className="font-bold text-xl flex items-center space-x-2 mt-4">
                 <span className="w-3 h-3 border-2 border-black rounded-full"></span>
+                
+                <span>Direct Bank Transfer</span>
+              </h3>
+              <h3 className="font-bold text-xl flex items-center space-x-2 mt-4">
+                <span className="w-3 h-3 border-2 border-black rounded-full"></span>
+                
                 <span>Cash on Delivery</span>
               </h3>
               <p className="text-sm mt-2">
                 Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
               </p>
               {/* Place Order Button */}
-              <button 
-                onClick={handlePlaceOrder} 
-                className="w-full py-2 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
+              <button className="w-full py-2 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
                 Place Order
               </button>
             </div>
@@ -236,4 +224,4 @@ const Checkout = () => {
   )
 }
 
-export default Checkout;
+export default Checkout

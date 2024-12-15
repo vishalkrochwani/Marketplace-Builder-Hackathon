@@ -108,10 +108,7 @@ const AsgaardSofaPage = () => {
               className="w-16 border rounded text-center"
             />
             <button className="bg-black text-white px-4 py-2 rounded">Add to Cart</button>
-            <button className="bg-black text-white px-4 py-2 rounded"><Link href="/shop/asgaardsofa/cartside"></Link>View Cart </button>
           </div>
-
-          
 
           {/* Additional Text in Two Columns */}
           <div className="grid grid-cols-2 gap-4 mt-4">

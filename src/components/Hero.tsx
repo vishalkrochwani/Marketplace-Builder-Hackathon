@@ -24,7 +24,7 @@ const Hero = () => {
         {/* Right Section */}
         <div className="w-1/2 h-full flex items-center justify-center">
           <Image
-            src="/image/rocket_chair.png"
+            src="/image/rocket_chair.webp"
             alt="Rocket Single Seater"
             width={500} 
             height={500} 
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="flex justify-between">
             <div className="w-1/2 pr-4">
             <Image
-                src="/image/side_table.png"
+                src="/image/side_table.webp"
                 alt="Side Table"
                 width={400}
                 height={400}
@@ -54,7 +54,7 @@ const Hero = () => {
             </div>
             <div className="w-1/2 pl-4">
             <Image
-                src="/image/side_table_2.png"
+                src="/image/side_table_2.webp"
                 alt="Another Side Table"
                 width={400}
                 height={400}
@@ -129,11 +129,11 @@ const Hero = () => {
       </section>
 
       {/* Fourth Section: Image and New Arrivals */}
-      <section className="bg-amber-50 py-10">
+      <section className="bg-amber-100 py-10">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="w-1/2 pr-4">
             <Image
-              src="/image/asgaardsofa.png" 
+              src="/image/asgaardsofa.webp" 
               alt="Asgaard Sofa"
               width={500}
               height={500}
@@ -147,8 +147,8 @@ const Hero = () => {
             <div className="container mx-auto flex justify-end py-10 text-center">
             <a 
   href="/shop/asgaardsofa"
-  className="text-center border-2 border-black text-black py-2 px-6 text-lg font-semibold rounded-md hover:bg-black hover:text-white transition"
-  style={{ display: "inline-block" }}
+  className="align-center text-center border-2 border-black text-black py-2 px-6 text-lg font-semibold rounded-md hover:bg-black hover:text-white transition"
+  style={{ display: "inline-block", textAlign: "center" }}
 >
   Order Now
 </a>
