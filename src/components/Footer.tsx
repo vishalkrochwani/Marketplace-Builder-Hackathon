@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import PaymentOptions from '@/app/paymentoption/page'
 
 const Footer = () => {
   return (
@@ -31,9 +32,9 @@ const Footer = () => {
           {/* Third Column: Payment Options, Returns, Privacy Policy */}
           <div className="flex flex-col gap-4">
             <h6 className="footer-title  text-gray-500">Help</h6>
-            <Link href="/payment-options" className="link link-hover">Payment Options</Link>
+            <Link href="/paymentoption" className="link link-hover">Payment Options</Link>
             <Link href="/returns" className="link link-hover">Returns</Link>
-            <Link href="/privacy-policy" className="link link-hover">Privacy Policy</Link>
+            <Link href="/privacy" className="link link-hover">Privacy Policy</Link>
           </div>
 
           {/* Fourth Column: Newsletter */}
@@ -45,7 +46,7 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="Enter your email Address"
-                    className="input input-bordered join-item" />
+                    className="input input-bordered join-item" /><br/>
                   <button className="btn btn-primary join-item">Subscribe</button>
                 </div>
               </fieldset>

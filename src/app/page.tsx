@@ -1,9 +1,10 @@
-import React from 'react'
+// src/app/page.tsx
+import Hero from "@/components/Hero";  // Import the Hero component
 
-const page = () => {
+export default function HomePage() {
   return (
-    <div></div>
-  )
+    <>
+      <Hero /> {/* This will render Sec1 to Sec6 only on the homepage */}
+    </>
+  );
 }
-
-export default page

@@ -2,13 +2,23 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Sec7 from '../../components/Sec7'
+import { FaFilter, FaList, FaTh, FaThList } from 'react-icons/fa'; // Import the icons
 
 const Shop = () => {
   return (
     <div>
      {/* First Section with Tailwind Background */}
-     <section
-        className="relative h-[60vh] bg-cover bg-center bg-shop-bg">
+     
+          <section className="relative h-[60vh]">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/image/bg.jpeg')", // Path to shop.png
+            opacity: 0.6, // Adjusts the transparency of the background image (40% transparency)
+          }}
+        ></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
           {/* Small Image in Center */}
@@ -21,12 +31,53 @@ const Shop = () => {
               className="object-cover rounded-full"
             />
           </div>
-          <h1 className="text-5xl font-bold">Shop</h1>
-          <p className="text-xl mt-4">
+          <h1 className="text-5xl font-bold text-black">Shop</h1>
+          <p className="text-xl mt-4 text-black">
             <Link href="/">Home</Link> &gt; Shop
           </p>
         </div>
       </section>
+
+      {/* New Section: Filters, Pagination, and Sort */}
+      <div className="bg-gray-100 py-4">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          {/* Left side: Filter Icon, Text, and Category Icon */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <FaFilter className="text-xl" /> {/* Filter Icon */}
+              <span className="text-lg">Filter</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <FaList className="text-xl" /> {/* Category Icon */}
+              <span className="text-lg">Category</span>
+            </div>
+            <div className="text-lg">
+            Showing 1-16 out of 32 items
+          </div>
+          </div>
+
+          
+          
+
+          {/* Right side: Sort and View */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">Show</span>
+              <div className="bg-white text-center w-12 py-1 text-sm text-gray-500">
+                16
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="text-lg">Sort By</span>
+              <select className="bg-white border rounded-md p-2 text-gray-600">
+                <option>Default</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Second Section: Product Grid */}
       <section className="bg-white text-black py-10">
@@ -226,54 +277,31 @@ const Shop = () => {
 
       {/* Pagination Section */}
       <section className="py-10 text-center">
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 ">
           <Link href={`/shop?page=1`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10 bg-amber-100 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
               1
             </div>
           </Link>
           <Link href={`/shop?page=2`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10  bg-amber-100 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
               2
             </div>
           </Link>
           <Link href={`/shop?page=3`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10  bg-amber-100 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
               3
             </div>
           </Link>
           <Link href={`/shop?page=next`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10  bg-amber-100 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
               Next
             </div>
           </Link>
         </div>
       </section>
 
- {/* 3RD Section: CONCEPT Posts */}
-<section className="bg-gray-100 text-black py-10">
-  <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {/* First Column */}
-      <div className="text-center">
-        <h2 className="text-black font-bold text-3xl">Free Delivery</h2>
-        <p className="text-lg text-gray-700">For all orders over $50, consectetur adipim scing elit.</p>
-      </div>
-
-      {/* Second Column */}
-      <div className="text-center">
-        <h2 className="text-black font-bold text-3xl">90 Days Return</h2>
-        <p className="text-lg text-gray-700">If the product has an issue, consectetur adipim scing elit.</p>
-      </div>
-
-      {/* Third Column */}
-      <div className="text-center">
-        <h2 className="text-black font-bold text-3xl">Secure Payments</h2>
-        <p className="text-lg text-gray-700">100% secure payments, consectetur adipim scing elit.</p>
-      </div>
-    </div>
-  </div>
-</section>
+ <Sec7/>
 
 
 

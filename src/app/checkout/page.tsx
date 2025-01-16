@@ -1,12 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Sec7 from '../../components/Sec7'
 
 const Checkout = () => {
   return (
     <div>
       {/* First Section with Tailwind Background */}
-      <section className="relative h-[60vh] bg-cover bg-center bg-shop-bg">
+      <section className="relative h-[60vh] ">
+      <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/image/bg.jpeg')", // Path to shop.png
+            opacity: 0.6, // Adjusts the transparency of the background image (40% transparency)
+          }}
+        ></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
           {/* Small Image in Center */}
@@ -19,8 +27,8 @@ const Checkout = () => {
               className="object-cover rounded-full"
             />
           </div>
-          <h1 className="text-5xl font-bold">Check Out</h1>
-          <p className="text-xl mt-4">
+          <h1 className="text-5xl font-bold text-black">Check Out</h1>
+          <p className="text-xl mt-4 text-black">
             <Link href="/">Home</Link> &gt; Check Out
           </p>
         </div>
@@ -174,13 +182,13 @@ const Checkout = () => {
               <p className="text-sm mt-2">
                 Make our payment directly into our bank account. Please use your order ID as the payment reference. Your order will not be shipped until your funds shift onto our account.
               </p>
-              <h3 className="font-bold text-xl flex items-center space-x-2 mt-4">
+              <h3 className=" text-xl flex items-center space-x-2 mt-4 text-gray-500">
                 <span className="w-3 h-3 border-2 border-black rounded-full"></span>
                 
                 <span>Direct Bank Transfer</span>
               </h3>
-              <h3 className="font-bold text-xl flex items-center space-x-2 mt-4">
-                <span className="w-3 h-3 border-2 border-black rounded-full"></span>
+              <h3 className=" text-xl flex items-center space-x-2 mt-4 text-gray-500">
+                <span className="w-3 h-3 border-2 border-black rounded-full "></span>
                 
                 <span>Cash on Delivery</span>
               </h3>
@@ -189,37 +197,18 @@ const Checkout = () => {
               </p>
               {/* Place Order Button */}
               <button className="w-full py-2 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
-                Place Order
+                <Link href="/cart">Place Order</Link>
+               
+               
+                
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3rd Section: CONCEPT Posts */}
-      <section className="bg-gray-100 text-black py-10">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* First Column */}
-            <div className="text-center">
-              <h2 className="text-black font-bold text-3xl">Free Delivery</h2>
-              <p className="text-lg text-gray-700">For all orders over $50, consectetur adipim scing elit.</p>
-            </div>
-
-            {/* Second Column */}
-            <div className="text-center">
-              <h2 className="text-black font-bold text-3xl">90 Days Return</h2>
-              <p className="text-lg text-gray-700">If the product has an issue, consectetur adipim scing elit.</p>
-            </div>
-
-            {/* Third Column */}
-            <div className="text-center">
-              <h2 className="text-black font-bold text-3xl">Secure Payments</h2>
-              <p className="text-lg text-gray-700">100% secure payments, consectetur adipim scing elit.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<Sec7/>
+    
     </div>
   )
 }

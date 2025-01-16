@@ -1,12 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Sec7 from '../../components/Sec7'
 
 const Account = () => {
   return (
     <div>
       {/* First Section with Tailwind Background */}
-      <section className="relative h-[60vh] bg-cover bg-center bg-shop-bg">
+      
+      <section className="relative h-[60vh]">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/image/bg.jpeg')", // Path to shop.png
+            opacity: 0.6, // Adjusts the transparency of the background image (40% transparency)
+          }}
+        ></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
           {/* Small Image in Center */}
@@ -19,8 +29,8 @@ const Account = () => {
               className="object-cover rounded-full"
             />
           </div>
-          <h1 className="text-5xl font-bold">Shop</h1>
-          <p className="text-xl mt-4">
+          <h1 className="text-5xl font-bold text-black">My Account</h1>
+          <p className="text-xl mt-4 text-black">
             <Link href="/">Home</Link> &gt; My Account
           </p>
         </div>
@@ -60,13 +70,10 @@ const Account = () => {
                   <label htmlFor="rememberMe" className="text-lg">Remember Me</label>
                 </div>
                 {/* Login Button */}
-                <button className="w-10000 py-2 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
+                <button className="w-10000 px-14 py-3 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
                   Login
-                </button>
-                {/* Lost Password Link */}
-                <div className="text-center mt-4">
-                  <Link href="#" className="text-lg text-blue-600">Lost your password?</Link>
-                </div>
+                </button> <Link href="#" className="text-lg text-blue-600 px-8">Lost your password?</Link>
+               
               </form>
             </div>
 
@@ -94,7 +101,7 @@ const Account = () => {
                   </p>
                 </div>
                 {/* Register Button */}
-                <button className="w-100 py-4 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
+                <button className="w-100 px-14 py-3 bg-transparent border border-black rounded-md text-black text-lg hover:bg-black hover:text-white transition">
                   Register
                 </button>
               </form>
@@ -103,30 +110,7 @@ const Account = () => {
         </div>
       </section>
 
-      {/* 3rd Section: CONCEPT Posts */}
-      <section className="bg-gray-100 text-black py-10">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* First Column */}
-            <div className="text-center">
-              <h2 className="text-black font-bold text-3xl">Free Delivery</h2>
-              <p className="text-lg text-gray-700">For all orders over $50, consectetur adipim scing elit.</p>
-            </div>
-
-            {/* Second Column */}
-            <div className="text-center">
-              <h2 className="text-black font-bold text-3xl">90 Days Return</h2>
-              <p className="text-lg text-gray-700">If the product has an issue, consectetur adipim scing elit.</p>
-            </div>
-
-            {/* Third Column */}
-            <div className="text-center">
-              <h2 className="text-black font-bold text-3xl">Secure Payments</h2>
-              <p className="text-lg text-gray-700">100% secure payments, consectetur adipim scing elit.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Sec7/>
     </div>
   )
 }
