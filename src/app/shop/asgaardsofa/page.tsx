@@ -6,18 +6,25 @@ import Link from 'next/link';
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa'; // For social media icons
 import { IoCloseCircleOutline } from 'react-icons/io5'; // For cross icon
 
+type CartItem = {
+  id: string;
+  name: string;
+  quantity: number;
+  price: number;
+};
+
 const AsgaardSofaPage = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState <CartItem[]>([]);
 
   const handleAddToCart = () => {
     // Add the selected item to the cart
-    const newItem = { id: 'SS001', name: 'Asgaard Sofa', quantity: 1, price: 250000 };
+    const newItem : CartItem = { id: 'SS001', name: 'Asgaard Sofa', quantity: 1, price: 250000 };
     setCartItems([...cartItems, newItem]);
     setDrawerOpen(true); // Open the drawer after adding to cart
   };
 
-  const handleQuantityChange = (itemId, newQuantity) => {
+  const handleQuantityChange = (itemId: string, newQuantity: number) => {
     const updatedItems = cartItems.map((item) =>
       item.id === itemId ? { ...item, quantity: newQuantity } : item
     );
